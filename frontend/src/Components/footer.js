@@ -1,72 +1,38 @@
 import React from "react";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+function footer() {
+  return (
+    <div className="bg-[#171717] text-white p-2 w-full justify-center flex flex-col items-center">
+      <div className="w-full flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
+          <p className="font-serif tracking-wide">--- Connect with us ---</p>
+          <div className="flex flex-row space-x-8 mt-1 mb-2">
+            <p className="hover:scale-110 hover:text-orange-700 cursor-pointer duration-100">
+              <InstagramIcon />
+            </p>
 
-const Footer = () => {
-    return (
-        <footer
-            style={{
-                padding: "20px",
-                backgroundColor: "rgb(17,24,39)",
-                color: "white",
-            }}
-        >
-            <div style={{ marginBottom: "20px" }}>
-                <h2 style={{ fontSize: "1.5rem", marginBottom: "10px" }}>
-                    Social Media Links
-                </h2>
-                <ul style={{ listStyleType: "none", padding: 0, lineHeight: "2" , color: "white", textDecoration: "none"}}>
-                    <li>
-                        <a
-                            href="https://facebook.com"
-                            target="_blank">
-                            Facebook
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://twitter.com"
-                            target="_blank">
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://linkedin.com"
-                            target="_blank">
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://instagram.com"
-                            target="_blank">
-                            Instagram
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 style={{ fontSize: "1.5rem", marginBottom: "10px" }}>
-                    User Support
-                </h2>
-                <ul style={{ listStyleType: "none", padding: 0, lineHeight: "2", color: "white", textDecoration: "none"  }}>
-                    <li>
-                        <a href="/faq">
-                            FAQ Section</a>
-                    </li>
-                    <li>
-                        <a href="/report-issues">
-                            Report Issues
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/help-center">
-                            Help Center
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    );
-};
+            <p className="hover:scale-110 hover:text-blue-400 cursor-pointer duration-100">
+              <TwitterIcon />
+            </p>
+            <p className="hover:scale-110  cursor-pointer duration-100">
+              <XIcon />
+            </p>
 
-export default Footer;
+            <p className="hover:scale-110 hover:text-blue-600 cursor-pointer duration-100">
+              <FacebookIcon />
+            </p>
+          </div>
+        </div>
+        <p className="mt-2 border-t-2 pt-2 w-full text-center opacity-50">
+          © 2025 DisCuss. All rights reserved.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default footer;
