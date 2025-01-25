@@ -1,11 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Homepage from "./Components/homepage";
-import Navbar from "./Components/navbar";
-import Footer from "./Components/footer";
+import Homepage from "./Components/Homepage/homepage";
+import Navbar from "./Components/Homepage/navbar";
+import Footer from "./Components/Homepage/footer";
 import Discussion from "./Components/Discussion/discussion";
 import Trending from "./Components/Trending/trending";
 import Explore from "./Components/Explore/explore";
+import Login from "./Components/Authentication/login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/Trending"
+            path="/trending"
             element={
               <>
                 <Trending></Trending>
@@ -38,10 +39,18 @@ function App() {
             }
           ></Route>
           <Route
-            path="/Explore"
+            path="/explore"
             element={
               <>
                 <Explore></Explore>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/auth"
+            element={
+              <>
+                <Login></Login>
               </>
             }
           ></Route>

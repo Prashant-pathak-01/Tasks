@@ -4,13 +4,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
-function footer() {
+function Footer() {
   return (
     <div className="bg-[#171717] text-white p-2 w-full justify-center flex flex-col items-center">
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <p className="font-serif tracking-wide">--- Connect with us ---</p>
           <div className="flex flex-row space-x-8 mt-1 mb-2">
+            <p className="hover:scale-110 hover:text-blue-600 cursor-pointer duration-100">
+              <LinkedInIcon />
+            </p>
+
             <p className="hover:scale-110 hover:text-orange-700 cursor-pointer duration-100">
               <InstagramIcon />
             </p>
@@ -35,4 +39,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function homepage() {
+function Homepage() {
   return (
     <div className=" min-h-screen flex justify-center items-center text-4xl font-serif">
       Homepage
@@ -8,4 +8,4 @@ function homepage() {
   );
 }
 
-export default homepage;
+export default Homepage;
