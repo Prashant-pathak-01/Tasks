@@ -1,5 +1,4 @@
 import User from "../Models/user";
-import mongoose from "mongoose";
 
 export const signup = async (req, res) => {
   try {
