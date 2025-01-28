@@ -1,7 +1,32 @@
 import React, { useState } from 'react';
+import {login} from './../../APIs/apis'
+import {signup} from './../../APIs/apis'
 
 export default function AuthForm() {
     const [isLogin, setIsLogin] = useState(true);
+    const[email, setEmail] = useState('');
+    const[password, setPassword] = useState('');
+    const[confirmPassword, setConfirmPassword] = useState('');
+
+    const handleLogin=async()=>{
+        let res = await login({email:email,password:password});
+        if(res.status==200){
+            alert("Authentication successful");
+        }else{
+            alert("Authentication failed");
+
+        }
+    }
+
+    const handleSignup=async()=>{
+        let res = await signup({email:email,password:password});
+        if(res.status==200 || res.status==201){
+            alert(res.message);
+        }else{
+            alert("Authentication failed");
+
+        }
+    }
 
     return (
         <div className="flex justify-center items-center h-screen bg-[#0C67A0]">
@@ -23,12 +48,12 @@ export default function AuthForm() {
                 {isLogin ? (
                     <div className="flex flex-col">
                         <h2 className="mb-5 text-xl">Login Form</h2>
-                        <input className="p-2 mb-3 border border-gray-300 rounded" type="email" placeholder="Email" />
-                        <input className="p-2 mb-3 border border-gray-300 rounded" type="password" placeholder="Password" />
+                        <input onChange={(e)=>setEmail(e.target.value)} className="p-2 mb-3 border border-gray-300 rounded" type="email" placeholder="Email" />
+                        <input onChange={(e)=>setPassword(e.target.value)} className="p-2 mb-3 border border-gray-300 rounded" type="password" placeholder="Password" />
                         <a className="text-blue-600 mb-3 text-right" href="#">
                             Forgot Password?
                         </a>
-                        <button className="p-2 bg-[#033452] text-white rounded">Login</button>
+                        <button onClick={handleLogin} className="p-2 bg-[#033452] text-white rounded">Login</button>
                         <p className="text-center">
                             Not a Member?{' '}
                             <a className="text-blue-600" href="#" onClick={() => setIsLogin(false)}>
@@ -39,10 +64,10 @@ export default function AuthForm() {
                 ) : (
                     <div className="flex flex-col">
                         <h2 className="mb-5 text-xl">Signup Form</h2>
-                        <input className="p-2 mb-3 border border-gray-300 rounded" type="email" placeholder="Email" />
-                        <input className="p-2 mb-3 border border-gray-300 rounded" type="password" placeholder="Password" />
-                        <input className="p-2 mb-3 border border-gray-300 rounded" type="password" placeholder="Confirm Password" />
-                        <button className="p-2 bg-[#033452] text-white rounded">Signup</button>
+                        <input className="p-2 mb-3 border border-gray-300 rounded" type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Email" />
+                        <input className="p-2 mb-3 border border-gray-300 rounded" type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
+                        <input className="p-2 mb-3 border border-gray-300 rounded" type="password" onChange={(e)=>setConfirmPassword(e.target.value)} placeholder="Confirm Password" />
+                        <button className="p-2 bg-[#033452] text-white rounded" onClick={handleSignup}>Signup</button>
                     </div>
                 )}
             </div>

@@ -1,4 +1,4 @@
-import User from "../Models/user";
+import User from "./../models/user.js";
 
 export const signup = async (req, res) => {
   try {
@@ -13,14 +13,14 @@ export const signup = async (req, res) => {
     if (user) {
       return res
         .status(201)
-        .json({ message: "User with this email already exist" });
+        .json({ status:201, message: "User with this email already exist" });
     }
 
     const newUser = new User(req.body);
     let output = await newUser.save();
-    return res.status(200).json({ message: output });
+    return res.status(200).json({status:200,  message: "User logged in",data:output });
   } catch (error) {
-    return res.status(500).json({ message: "Could not fetch data" });
+    return res.status(500).json({ status:500, message: "Could not fetch data" });
   }
 };
 
@@ -32,15 +32,15 @@ export const login = async (req, res) => {
     if (!user) {
       return res
         .status(203)
-        .json({ message: "User with this email does not exist" });
+        .json({ status:203, message: "User with this email does not exist" });
     }
 
     if (password === user.password) {
-      return res.status(200).json({ ...user });
+      return res.status(200).json({ status:200, user:user });
     } else {
-      return res.status(201).json({ message: "Wrong Password" });
+      return res.status(201).json({ status:201, message: "Wrong Password" });
     }
   } catch (error) {
-    return res.status(500).json({ message: "Could not fetch data" });
+    return res.status(500).json({ status:500, message: "Could not fetch data" });
   }
 };

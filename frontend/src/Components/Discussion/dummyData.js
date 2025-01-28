@@ -101,4 +101,5 @@ const posts = [
     },
   ];
   
-export default posts;  
+  
+module.exports=posts;  

@@ -1,61 +1,46 @@
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Auth from "./Components/Authentication/auth";
+// import Discussion from "./Components/Discussion/discussion";
+import Explore from "./Components/Explore/explore";
+import Footer from "./Components/Homepage/footer";
 import Homepage from "./Components/Homepage/homepage";
 import Navbar from "./Components/Homepage/navbar";
-import Footer from "./Components/Homepage/footer";
-import Discussion from "./Components/Discussion/discussion";
 import Trending from "./Components/Trending/trending";
-import Explore from "./Components/Explore/explore";
-import Login from "./Components/Authentication/login";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Card from "./Components/Discussion/Maincard";
+
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar></Navbar>
+        <Navbar />
         <Routes>
           <Route
             path="/"
-            element={
-              <>
-                <Homepage></Homepage>
-              </>
-            }
-          ></Route>
-          <Route
+            element={<Homepage />}
+          />
+          {/* <Route
             path="/discussion"
-            element={
-              <>
-                <Discussion></Discussion>
-              </>
-            }
-          ></Route>
+            element={<Discussion />}
+          /> */}
           <Route
             path="/trending"
-            element={
-              <>
-                <Trending></Trending>
-              </>
-            }
-          ></Route>
+            element={<Trending />}
+          />
           <Route
             path="/explore"
-            element={
-              <>
-                <Explore></Explore>
-              </>
-            }
-          ></Route>
+            element={<Explore />}
+          />
           <Route
             path="/auth"
-            element={
-              <>
-                <Login></Login>
-              </>
-            }
-          ></Route>
+            element={<Auth />}
+          />
+          <Route 
+            path="/Discussion"
+            element={<Card />} 
+            />
         </Routes>
-        <Footer></Footer>
+        <Footer />
       </Router>
     </div>
   );
