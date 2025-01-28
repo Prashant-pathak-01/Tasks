@@ -19,12 +19,15 @@ export default function AuthForm() {
     }
 
     const handleSignup=async()=>{
-        let res = await signup({email:email,password:password});
-        if(res.status==200 || res.status==201){
-            alert(res.message);
+        if(password==confirmPassword){
+            let res = await signup({email:email,password:password});
+            if(res.status==200 || res.status==201){
+                alert(res.message);
+            }else{
+                alert("Authentication failed");
+            }
         }else{
-            alert("Authentication failed");
-
+            alert("Passwords didn't match.");
         }
     }
 

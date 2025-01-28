@@ -20,9 +20,9 @@ function MainCard() {
             key={index}
             className="shadow-lg rounded-lg p-4 bg-blue-100 hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transition duration-300 hover:scale-105"
           >
-            {post.image && (
+            {post.images && (
               <img
-                src={post.image}
+                src={post.images.length>0!=""?post.images[0]:"https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630"}
                 alt="Post"
                 className="w-full h-32 object-cover rounded-lg mb-4"
               />
@@ -37,7 +37,7 @@ function MainCard() {
             <p className="text-sm font-light text-gray-700 mb-4">
               {expandedCard === index
                 ? post.content
-                : `${post.content.slice(0, 80)}...`} {/* Show 80 characters */}
+                : `${post.content.slice(0, 80)}...`}
             </p>
             <button
               onClick={() => handleReadMore(index)}
