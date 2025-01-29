@@ -2,7 +2,7 @@ const posts = [
     {
       name: "Post Title 1",
       postedBy: "User1",
-      images: ["image1.jpg", "image2.jpg"],
+      images: ["https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q="],
       date: "2025-01-24",
       content: "This is the content for post 1. It provides detailed information about the topic discussed in this post. The purpose is to engage the audience and encourage them to share their thoughts. Content like this helps spark conversations and build connections within the community. We aim to provide value with each post, ensuring readers take something meaningful away. Whether it’s tips, advice, or stories, there’s always something to learn. Posts with thoughtful content inspire readers to interact more, contributing to a thriving online environment.",
       likes: 120,
@@ -12,7 +12,7 @@ const posts = [
     {
       name: "Post Title 2",
       postedBy: "User2",
-      images: ["image3.jpg"],
+      images: [],
       date: "2025-01-23",
       content: "This is the content for post 2. It discusses an intriguing topic relevant to the audience. The goal is to provide insights, share experiences, or deliver educational material in a concise yet comprehensive manner. Engaging content encourages readers to interact, reply, and share. This post is structured to catch attention and offer value. Whether you’re seeking entertainment or knowledge, this post has you covered. Posts like this foster meaningful interactions, creating a space for sharing ideas and building strong connections online.",
       likes: 85,
@@ -22,7 +22,7 @@ const posts = [
     {
       name: "Post Title 3",
       postedBy: "User3",
-      images: ["image4.jpg", "image5.jpg", "image6.jpg"],
+      images: [],
       date: "2025-01-22",
       content: "This is the content for post 3. It dives into a thought-provoking discussion about a trending subject. The post aims to educate and inspire readers, offering new perspectives or actionable tips. Writing with depth and clarity ensures readers stay engaged. Content creation like this involves research and passion to deliver valuable insights. Each post is crafted to make an impact, whether it’s entertaining, informing, or sparking debates. By sharing real stories or ideas, we encourage the audience to think critically and contribute meaningfully.",
       likes: 150,
@@ -42,7 +42,7 @@ const posts = [
     {
       name: "Post Title 5",
       postedBy: "User5",
-      images: ["image7.jpg"],
+      images: [],
       date: "2025-01-20",
       content: "This is the content for post 5. It tells a story that resonates with the audience, drawing them into the narrative. The focus is on crafting a relatable and engaging piece that captures attention from start to finish. Effective storytelling involves vivid descriptions, emotional connections, and a clear message. Posts like this inspire readers to reflect, comment, and share. By weaving together facts and creativity, we ensure the content is both informative and entertaining. Every post is an opportunity to connect with readers on a deeper level.",
       likes: 70,
@@ -52,7 +52,7 @@ const posts = [
     {
       name: "Post Title 6",
       postedBy: "User6",
-      images: ["image8.jpg", "image9.jpg"],
+      images: [],
       date: "2025-01-19",
       content: "This is the content for post 6. It highlights a fascinating subject, presenting ideas in an engaging and easy-to-read format. Posts like this aim to create a balance between education and entertainment, offering readers something of value. Crafting meaningful content takes effort, from selecting topics to writing and editing. Every detail matters when it comes to making an impact. This post encourages the audience to participate, fostering a sense of community. By focusing on quality and relevance, we ensure that the content resonates with readers.",
       likes: 200,
@@ -72,7 +72,7 @@ const posts = [
     {
       name: "Post Title 8",
       postedBy: "User8",
-      images: ["image10.jpg", "image11.jpg", "image12.jpg"],
+      images: [],
       date: "2025-01-17",
       content: "This is the content for post 8. It provides a deep dive into a subject that’s both timely and relevant. Posts like this are designed to captivate the audience, offering a mix of interesting facts, personal experiences, and actionable advice. Writing with clarity and enthusiasm ensures readers stay engaged from start to finish. The content is structured to inform and inspire, leaving readers with something valuable to take away. By creating thoughtful posts, we foster a sense of community and encourage meaningful interactions.",
       likes: 180,
@@ -82,7 +82,7 @@ const posts = [
     {
       name: "Post Title 9",
       postedBy: "User9",
-      images: ["image13.jpg"],
+      images: [],
       date: "2025-01-16",
       content: "This is the content for post 9. It shares insights on a topic that’s sure to spark interest and engagement. By combining storytelling with factual information, this post delivers value to its readers. Thoughtful content creation involves understanding the audience and presenting ideas in an engaging way. Each post is an opportunity to connect with readers, encouraging them to reflect, respond, and share. Posts like this play a crucial role in fostering online conversations and building a strong sense of community.",
       likes: 90,
@@ -101,4 +101,5 @@ const posts = [
     },
   ];
   
-export default posts;  
+  
+module.exports=posts;  

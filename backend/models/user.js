@@ -1,14 +1,8 @@
 import mongoose from "mongoose";
 
 export const userSchema = new mongoose.Schema({
-  firstName: {
+  name: {
     type: String,
-    required: true,
-    trim: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
     trim: true,
   },
   photo: {

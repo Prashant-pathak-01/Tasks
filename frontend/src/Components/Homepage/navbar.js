@@ -48,7 +48,7 @@ function Navbar() {
       </div>
       <div className="md:flex hidden">
         <Link to="/auth">
-          <button class="button">Login</button>
+          <button className="button">Login</button>
         </Link>
       </div>
     </nav>
