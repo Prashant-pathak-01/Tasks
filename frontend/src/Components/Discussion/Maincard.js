@@ -18,7 +18,7 @@ function MainCard() {
         {posts.map((post, index) => (
           <div
             key={index}
-            className="shadow-lg rounded-lg p-4 bg-blue-100 hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transition duration-300 hover:scale-105"
+            className="shadow-lg rounded-lg p-4 bg-blue-100 hover:bg-gradient-to-r from-purple-300 via-pink-300 to-red-300 transition duration-300 hover:scale-105"
           >
             {post.images && (
               <img
